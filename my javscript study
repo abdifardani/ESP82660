@@ -1,0 +1,941 @@
+// const dec = document.getElementById('dec');
+// const inc = document.getElementById("inc");
+
+
+// function count() {
+//     var num = 0;
+//     const number = document.getElementById("h1");
+//     function decrement() {
+//         dec.addEventListener('click', function() {
+//             num -= 1;
+//             number.innerText = num;
+//         })
+//     }
+//     function increment() {
+//         inc.addEventListener('click', function() {
+//             num += 1;
+//             number.innerText = num;
+//         })
+//     }
+
+//     return {
+//         increment,
+//         decrement
+//     }
+// }
+
+// const counting = count();
+// counting.increment();
+// counting.decrement();
+
+
+
+// const mahasiswa = function() {
+//     this.nama = 'abdi';
+//     this.umur = 17;
+//     this.sayHello = function() {
+//         console.log('nama kamu adalah ' + this.nama + 'dan umur kamu adalah ' + this.umur);
+//     }
+// }
+
+// const abdi = new mahasiswa();
+
+// class Person {
+//     constructor(name) {
+//       this.name = name;
+//       this.name1 = name;
+//     }
+
+//     function class(name) {
+//         function nama() {
+//             this.name = name;
+//         }
+
+//         return nama;
+//     }
+
+//     const clast = class();
+  
+//     printNameFunction() {
+//       setTimeout(function()  {
+//         console.log(this.name1);
+//       }, 1000);
+//     }
+  
+//     printNameArrow() {
+//       setTimeout(() => {
+//         console.log(this.name);
+//       }, 1000);
+//     }
+//   }
+  
+//   const john = new Person('John');
+  
+//   john.printNameFunction(); // undefined (atau mungkin kesalahan, karena `this` mengacu ke global object atau undefined)
+//   john.printNameArrow(); // John (karena `this` mengacu ke instance Person)
+
+// 
+
+// function regularFunction() {
+//     console.log(this);
+//   }
+  
+//   const obj = {
+//     method: regularFunction
+//   };
+  
+//   const method = regularFunction;
+  
+//   obj.method(); // Output: 'Object Context'
+//   method(); // Output: undefined (atau global object jika tidak dalam strict mode)
+  
+
+
+
+
+// function Person(name) {
+//     this.name = name;
+//   }
+  
+//   Person.prototype.greet = function() {
+//     console.log(`Hello, my name is ${this.name}`);
+//   };
+  
+//   const john = new Person('John');
+//   john.greet(); // Output: Hello, my name is John
+  
+
+
+//   function person(name) {
+//     this.name = name;
+//     this.sayHello = function() {
+//         console.log('halo nama saya adalah ' + this.name);
+//     }
+//   }
+
+
+//   const abdi = new person('abdi');
+//   abdi.sayHello();
+  
+
+
+
+    // class person {
+    //     constructor(name) {
+    //         this.name = name;
+    //     }
+
+    //     greet() {
+    //         console.log('halo nama saya adalah ' + this.name);
+    //     }
+    // }
+
+    
+
+    // const abdi = new person('abdi');
+    // abdi.greet();   
+
+
+
+
+
+    // function orang(name) {
+    //     function kelas() {
+    //         this.name = name
+    //     }
+
+    //     return kelas;
+    // }
+
+
+    // const kelas = orang('abdi');
+    // const abdi = new kelas();
+    // console.log(abdi.name);
+
+    // const obj = {
+    //     nama: 'abdi'
+    // }
+
+    // function manggil() {
+    //     console.log(this.nama);
+    // }
+
+    // manggil.call(obj);
+
+    // this.age = 0;
+
+    // function umur() {
+    //     this.age = 0;
+
+    //     setInterval(function() {
+    //         this.age++;
+    //         console.log(this.age);
+    //     }, 1000)
+    // }
+
+    // const usia = new umur();
+
+    // function panggil(nama) {
+    //     function getName() {
+    //         return nama;
+    //     }
+
+    //     function setName(newName) {
+    //         nama = newName;
+    //     }
+
+    //     function method() {
+    //         console.log('halo ' + nama);
+    //     }
+
+    //     return {
+    //         getName,
+    //         setName,
+    //         method,
+    //     }
+    // }
+
+    // const abdi = panggil('abdi');
+    // abdi.method();
+    // abdi.setName('andi');
+    // abdi.method();
+
+    // const counter = {
+    //     count: 0,
+    //     increment: function() {
+    //       setTimeout(() => {
+    //         this.count++;
+    //         console.log(this.count); // `this` di sini mengacu pada `counter`
+    //       }, 1000);
+    //     }
+    //   };
+      
+    //   counter.increment(); // Output setelah 1 detik: 1
+
+
+
+      
+    // let i = 1;
+    //   function counts(n, method) {
+    //     while(i <= n) {
+    //         setTimeout(() => {
+    //             method(i);
+    //             i++
+    //         }, 1000);
+    //     }
+        
+    //   }
+            
+    //     counts(10, console.log);
+
+
+
+    // function menghitung() {
+    //     let i = 0;
+    //     function tambah(n) {
+    //         return i + n;
+    //     }
+
+    //     function kali(n) {
+    //         return i * n;
+    //     }
+
+    //     function kurang(n) {
+    //         return i - n;
+    //     }
+
+    //     return {
+    //         tambah,
+    //         kali,
+    //         kurang
+    //     }
+    // }
+
+
+    // const counts = menghitung();
+    // console.log(counts.tambah(10));
+
+
+
+    // const valueTetap = (vtetap) => {
+    //     const nilaiValue = (vNilai) => {
+    //         const tambah = () => {
+    //             return vtetap + vNilai;
+    //         }
+
+    //         const kurang = () => {
+    //             return vtetap - vNilai;
+    //         }
+
+    //         const kali = () => {
+    //             return vtetap * vNilai;
+    //         }
+
+    //         return {
+    //             tambah,
+    //             kurang,
+    //             kali,
+    //         }
+    //     }
+
+    //     return nilaiValue;
+    // }
+
+
+
+    const array = () => {
+        let aray = ['abdi', 'andi', 'dani']
+        const closure = (nama) => {
+            nama = () => {
+                console.log('anda telah menambahkan satu nama baru');
+            }
+            aray.push(nama);
+            console.log(aray);
+        }
+        return {
+            closure,
+            aray
+        }
+    }
+
+    // const deleted = (nama, array) => {
+    //     nama = () => {
+    //         if() {
+
+    //         } else {
+
+    //         }
+    //         console.log('anda menghapus ' + nama + ' nama tersebut')
+    //     }
+    //     array();
+    // }
+
+
+    // const act = array();
+    // act();
+
+
+
+
+
+
+    // filter
+    // const number = [1, 3, 5, 2, 4, -1, 11, 9];
+
+    // const newNumber1 = [];
+    // for(let i = 0; i < number.length; i++) {
+    //     if(number[i] > 3) {
+    //         newNumber1.push(number[i])
+    //     }
+    // }
+    // console.log(newNumber1);
+
+
+
+
+
+    // const newNumber = number.filter(a => a > 3)
+    // console.log(newNumber);
+
+
+
+
+
+
+
+    // map
+    // const number = [1, 3, 5, 2, 4, 7, 11, 9];
+    // number.forEach(function(a) {
+    //     a 
+    // })
+
+    // const newNumber = [];
+    // for(let i = 0; i < number.length; i++) {
+    //     newNumber.push(number[i] * 2);
+    // }
+
+    // console.log(newNumber);
+
+    // const newNumber1 = number.map(a => a * 2)
+    // console.log(newNumber1);
+    
+
+
+
+
+
+
+
+    // reduce
+    // const number = [1, 3, 5, 2, 4, 7, 11, 9];
+
+    // let newNumber1 = 0;
+    // for(let i = 0; i < number.length; i++) {
+    //     newNumber1 += number[i]
+    // }
+
+    // console.log(newNumber1);
+
+    // let newNumber = number.reduce((accumulator, currentValue) => accumulator + currentValue, "");
+    // console.log(newNumber);
+
+
+
+    // mixed it
+    // const number = [1, 3, 5, 2, 4, 7, 11, 9];
+
+    // const newNumber = number
+    // .filter(a => a > 3)
+    // .map(e => e * 2)
+    // .reduce((accumulator, currentValue) => accumulator + currentValue, 0)
+
+    // console.log(newNumber);
+
+
+
+
+
+
+
+
+
+    // // ambil semua element video
+    // const video = Array.from(document.querySelectorAll('[data-duration]'));
+    // console.log(video)
+
+    // // pilih yang hanya javascript lanjutan
+    // let jsLanjut = video.filter(element => element.innerHTML.includes('JAVASCRIPT LANJUTAN'))
+    // const jVideo = document.querySelector('.jumlah-video');
+    // jVideo.textContent = jsLanjut.length
+    
+
+    // // ambil durasi masing masing video
+    //   let jsLanjutedit = jsLanjut.map(element => element.dataset.duration)
+
+    // // ubah durasi menjadi int, ubah menit menjadi detik
+    // //   const  = jsLanjut.split(":")
+    //   .map(waktu => {
+    //     const int = waktu.split(":").map(element => parseFloat(element));
+    //     return int[0] * 60 + int[1];
+    // })
+
+    // // jumlahkan semua detik
+    //   .reduce((acumulator, currentValue) => acumulator + currentValue)
+      
+
+    // // ubah formatnya menjadi jam menit detik
+    //     const jam = Math.floor(jsLanjutedit / 3600);
+    //     jsLanjutedit = jsLanjutedit - jam * 3600;
+    //     const menit = Math.floor(jsLanjutedit / 60);
+    //     const detik = jsLanjutedit - menit * 60;
+    //     console.log(detik);
+
+
+
+    // // simpan di DOM
+    
+
+
+    // const tDurasi = document.querySelector('.total-durasi');
+    // tDurasi.textContent = jam + ':' + menit + ':' + detik;
+
+
+
+
+
+
+      // const perkenalan = {
+      //   namee: 'abdi',
+      //   usia: 12,
+      // //   ucapan() { 
+      // //     return `hai ${this.namee} usia saya ${this.usia}`
+      // //   }
+      // ucapan: `hai ${this.namee} usia ${this.usia}`
+      // }
+      // console.log(perkenalan);
+
+      // const addres = 'jalan mayorzen \nlorong setia \nrt16';
+      // console.log(addres)
+
+      // const address = `jalan mayorze
+      // lorong setia
+      // rt16`;
+
+      // console.log(address);
+
+
+    //   const x = 5;
+    //   const y = 10;
+
+    //   // const hasil = 'hasil dari pertamabahan antara x + y adalah ' + (x + y);
+    //   const hasil = `hasil dari penjumalahan antara ${x} + ${y} = ${x + y}`
+    //   console.log(hasil)
+
+
+
+
+
+
+
+
+    // html fragments
+    // const nama = 'abdi';
+    // const kelas = '12 sma';
+    // let htmlFragments = '';
+    // htmlFragments += '<div>'
+    // htmlFragments += '<h1>' + nama + '</h1>'
+    // htmlFragments += '</div>'
+
+    // const mhs = {
+    //     nama : 'abdi',
+    //     kota : 'palembang',
+    //     usia : '17',
+    // }
+
+    // htmlFragments = `<div>
+    // <h1>${mhs.nama}</h1>
+    // <h2>${mhs.kota}</h2>
+    // </div>`
+
+
+
+    // console.log(htmlFragments)
+
+
+
+
+
+
+    
+    // const numbers = [1, 2, 3, 4];
+    // const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+    // console.log(sum); // Output: 10
+
+
+    //   function toUpper(strings, ...values) {
+    //     // Map values to upper case and interleave them with strings
+    //     return strings.reduce((result, str, i) => `${result}${str}${values[i] ? values[i].toUpperCase() : ''}`, '');
+    // }
+    
+    // const nama = "Andi";
+    // const kota = "Bandung";
+    // const kalimat = toUpper`Halo, nama saya ${nama} dan saya tinggal di ${kota}.`;
+    
+    // console.log(kalimat);
+
+
+    // practice
+
+    // const siswa = {
+    //     nama: 'abdi',
+    //     kelas: 12,
+    //     nis: 6060,
+    // };
+
+    // const el = `<div>
+    // <h2>${siswa.nama}</h2>
+    // <h3>${siswa.nis}</h3>
+    // </div>`
+    
+
+    // document.body.innerHTML = el;
+    // console.log(el)
+
+//     const siswa = [ 
+//     {
+//         nama: 'abdi',
+//         kelas: 11,
+//         nis: 6060739,
+//     },
+//     {
+//         nama: 'dani',
+//         kelas: 12,
+//         nis: 7960799,
+//     },
+//     {
+//         nama: 'andi',
+//         kelas: 10,
+//         nis: 9060009,
+//     }
+// ]
+
+
+// const ul = siswa.map(m => `<ul>
+//     <li>${m.nama}</li>
+//     <li>${m.nis}</li>
+//     </ul>`).join('');
+
+
+    
+//     const el = `<div>
+//     ${siswa.map(m => `<ul>
+//         <li>${m.nama}</li>
+//         <li>${m.nis}</li>
+//         </ul>`)}
+//     </div>`;
+
+//     const el1 = `<div>
+//     ${ul}
+//     </div>`;
+
+//     // document.body.innerHTML = el;
+//     document.body.innerHTML = el1;
+//     console.log(el);
+
+
+
+    // condiotional
+
+
+
+    // const singer = {
+    //     nama : 'abdi',
+    //     usia : 17,
+    //     kota : 'palembang',
+    //     sekolah : 'smk pembina'
+    // }
+
+    // function tagTamp(string, ...values) {
+
+    //     let result = '';
+    //     string.forEach((str, i) => {
+    //         result += `${str}${values[i] ? values[i] : ''}`
+    //     })
+    //     return result;
+
+    // return string.reduce((accumulator, currentValue, i) => `${accumulator}${currentValue}${values[i] ? values[i] : ''}`)
+    // }
+
+    // const str = tagTamp`halo nama saya ${singer.nama} dan umur saya adalah ${singer.usia}. dan kota saya adalah ${singer.kota}`;
+    // console.log(str);
+
+    
+
+    // document.body.innerHTML = dom;
+
+
+
+//     const aray = [1, 2, 3];
+
+// const [
+//     satu, dua , tiga
+//     ] = aray;
+
+// console.log(satu);
+// console.log(dua);
+// console.log(tiga);
+
+
+
+const str = {
+    nama : 'abdi',
+    sekolah : 'smk pembina'
+}
+
+const {
+    nama,
+    sekolah
+} = str;
+
+function tag(string, ...values) {
+    console.log(string);
+    console.log(values);
+
+
+    let result = '';
+    string.forEach((strp, i) => {
+     result += `${strp}${values[i] ? values[i] : ''}`;
+     return result
+    })
+    
+}
+
+
+// const strr = tag`perkenalkan nama saya ${nama} dan saya sekolah di ${sekolah}`;
+// console.log(strr);
+
+
+// const intro = {
+//     nama : 'abdi',
+//     usia : 17,
+//     sekolah : 'smk pembina',
+//     mataPelajaran : [ 
+//     'b indonesia', 'b inggris', 'matematika', 'fisika', 'biologi'
+//     ]
+// }
+
+
+
+// const {
+//     nama,
+//     usia,
+//     sekolah,
+//     mataPelajaran
+// } = intro;
+
+
+
+// function ObjekMK(mataPljrn) {
+//     return `
+//     <ol>
+//         ${mataPljrn.map(mk => `<li>${mk}</li>`).join('')}
+//     </ol>`
+// }
+
+
+
+// function matpel(matpelajar) {
+//     return`<ol>
+//         ${matpelajar.map(mk => `<li>${mk}</li>`)}
+//     </ol>`
+// }
+
+// let web = `<div>
+//     <h3>${intro.nama}</h3>
+//     <h3>${intro.usia}</h3>
+//     ${matpel(mataPelajaran)}
+// </div>`
+
+// console.log(web);
+
+// document.body.innerHTML = web
+
+
+
+// const take = ({ nama }) => nama;
+// console.log(take(intro));
+
+
+
+
+
+    
+
+
+
+// const destFunction = (a, b) => {
+//     return [a + b, a - b, a * b, a / b];
+// }
+
+// function destFuncObj(a, b) {
+//     return {
+//         tambah: a + b,
+//         kurang: a - b,
+//         kali: a * b,
+//         bagi: a / b
+//     }
+// }
+
+
+// const {
+//     tambah,
+//     kurang,
+//     bagi,
+//     kali
+// } = destFuncObj();
+
+
+// // ingin membuat seluruh property yg berada di dalam objek yg didalam destFuncObj masuk sekaligus dlm consol
+// function map(perhitungan) {
+//     return`${perhitungan.map((mapp) => )}`
+// }
+
+
+
+// let [
+//     tambahDest,
+//     kurang,
+//     kali,
+//     bagi
+// ] = destFunction(2, 3);
+
+// console.log(tambahDest);
+
+
+// const mhs = {
+//     nama : 'abdi',
+//     asal : 'palembang',
+//     usia : '17',
+//     favSubject : {
+//         m : 'matematika',
+//         b : 'BIngg',
+//         l : 'listrik'
+//     }
+// }
+
+
+// const cetak = ({nama, asal, usia, favSubject: {m, b, l}}) => {
+//     return`perkenalkan nama saya adalah ${nama} dan saya tinggal di kota ${asal}
+//     dan usia saya adalah ${usia} dan matpel favorite saya adalah ${m}`;
+// }
+
+// console.log(cetak(mhs));
+
+
+
+
+// const TheFirstTraining = [1, 2, 3 ,4];
+
+// const [
+//     a,
+//     b,
+//     c,
+//     d, 
+// ] = TheFirstTraining
+
+// function firstTraining([a, b, ...values]) {
+//     return {
+//         a,
+//         b,
+//         values
+//     }
+// }
+
+
+// console.log(firstTraining(TheFirstTraining));
+
+
+
+
+
+// the first training 
+
+// const introo = {
+//     nama: 'budi',
+//     umur: 25
+// }
+
+// const {
+//     nama,
+//     umur,
+// } = introo;
+
+
+
+
+
+// // the second training
+// const secondTrain = [10, 20];
+
+// const [
+//     firstElement,
+//     secondElement
+// ]= secondTrain;
+
+
+
+
+
+
+
+
+// the third train 
+
+// const thirdTrain = (a, b) => {
+//     return{
+//         luas : a,
+//         keliling : b
+//     }
+// }
+
+// const {
+//     luas,
+//     keliling
+// } =  thirdTrain(50, 30);
+
+// console.log(luas)
+
+
+let angka = [1, 2, 3, 4, 5]
+
+let angka2 = angka.map(count => count * 14);
+console.log(angka2);
+
+
+
+let fruits = ['kiwi', 'mango', 'strawberry', 'blueberry'];
+
+let fruits2 = fruits.filter(fruitt => fruitt.length > 5);
+console.log(fruits2);
+
+
+
+let angka3 = [1, 2, 3, 4, 5]
+
+let angka4 = angka.map(count => count * 10);
+console.log(angka4);
+
+
+let random = ['mountain', 'hill', 'plateau', 'plain'];
+let random2 = random.filter(randoms => randoms.length <= 5);
+console.log(random2)
+
+
+
+
+
+
+
+
+// for(let j = 1; j <= 10; j++) {
+//     console.log(j)
+// }
+
+// let s = 0;
+// while(s < 10) {
+//   s++ 
+//   console.log(s)
+// }
+
+// function looping(s) {
+//     if(s === 10) return 10;
+//     console.log(s)
+//     looping(s+1)
+// }
+
+// looping(1)
+
+
+let mhs = ['abdi', 'dani', 'ucop'];
+
+mhs.forEach((m, i) => {
+    console.log(`${m} meruapakan mahasiswa ke-${i}`);
+})
+
+for(const [i, t] of mhs.entries()) {
+    console.log(`${t} adalah mahasiswa ke-${i}`);
+}
+
+const li = document.querySelectorAll('.nama');
+
+    li.forEach((l, i) => console.log(`${l.innerHTML} merupakan mahasiswa ke-${i}`));
+    for(const p of li) {
+        console.log(p.innerHTML)
+    }
+
+
+
+     function menambahkans() {
+         let jumlah = 0;
+         for( a of arguments) {
+            jumlah += a
+         }
+
+         return jumlah;
+     }
+
+     console.log(menambahkans(1, 2, 3, 4 ,5))
+
+
+
+
+     let mhss = {
+        nama : 'abdi',
+        asal : 'palembang',
+        usia : 17
+     }
+
+     for(const u in mhss) {
+        console.log(mhss[u])
+     }
+
